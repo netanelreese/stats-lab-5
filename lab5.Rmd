@@ -14,8 +14,40 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Task 1
+
 ```{r}
-x <- seq(0,10,by = 1)
-y <- dbinom(x,10,0.5)
-y
+mybin=function(iter=100,n=10, p=0.7){ 
+sam.mat=matrix(NA,nr=n,nc=iter, byrow=TRUE)
+succ=c()
+for( i in 1:iter){
+sam.mat[,i]=sample(c(1,0),n,replace=TRUE, prob=c(p,1-p))
+succ[i]=sum(sam.mat[,i])
+}
+succ.tab=table(factor(succ,levels=0:n))
+barplot(succ.tab/(iter), col=rainbow(n+1), main="Binomial simulation", xlab="Number of successes")
+succ.tab/iter
+}
+mybin(iter=100,n=10, p=0.7)
+mybin(iter=200,n=10, p=0.7)
+mybin(iter=500,n=10, p=0.7)
+mybin(iter=1000,n=10, p=0.7)
+mybin(iter=10000,n=10, p=0.7)
+
+dbin.tab = round(dbinom(0:10, size=10, p = 0.7), 4)
+names(dbin.tab) - 0:10
+dbin.tab
+
 ```
+
+### Task 2
+
+### Task 3
+
+### Task 4
+
+### Task 5
+
+### Task 6
+
+### Task 7
