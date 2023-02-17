@@ -1,0 +1,33 @@
+---
+title: "lab5"
+author: "Nathanael Reese"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: yes
+    toc_float: yes
+    theme: darkly
+    highlight: zenburn
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Task 1
+
+```{r}
+
+```
+
+### Task 2
+
+### Task 3
+
+### Task 4
+
+### Task 5
+
+### Task 6
+
+### Task 7

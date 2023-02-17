@@ -1,0 +1,21 @@
+---
+title: "lab5"
+author: "Nathanael Reese"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: yes
+    toc_float: yes
+    theme: darkly
+    highlight: zenburn
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+x <- seq(0,10,by = 1)
+y <- dbinom(x,10,0.5)
+y
+```
