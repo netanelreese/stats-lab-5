@@ -110,6 +110,20 @@ mysample(n=1000, iter=30, time=1)
 ### Task 5
 
 ```{r}
+choose(8, 4)
+#P(Y > 4), Y~Pois(lambd = 2)
+1 - ppois(4, 2)
+
+#P(Y = 10), Y~NegBin(p = 0.4, r = 3)
+r = 3
+y = 10
+n = r
+x = y - r
+
+dnbinom(x, n, prob=.4)
+
+# P(Y <= 8), Y~Bin(n = 15, p = 0.4)
+pbinom(8, 15, 0.4)
 
 ```
 
@@ -118,8 +132,6 @@ mysample(n=1000, iter=30, time=1)
 ```{r}
 library(NREESE)
 myf(100, 10, .5) #code for the mybin used as a package
-library(ILAS2019)
+#library(ILAS2019)
 #ILAS2019::myf()
 ```
-
-### Task 7
